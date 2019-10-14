@@ -23,7 +23,8 @@ file(GLOB CMD_SOURCE
 	"src/command/*.h"
 	"src/command/*.cpp"
 )
-add_executable(DemBonesCmd "${CMD_SOURCE}")
+# add_executable(DemBonesCmd "${CMD_SOURCE}")
+add_library( DemBonesCmd STATIC "${CMD_SOURCE}")
 set_target_properties(DemBonesCmd PROPERTIES OUTPUT_NAME "DemBones")
 
 find_package(TCLAP)
